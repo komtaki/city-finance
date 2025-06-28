@@ -51,9 +51,9 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
       />
       <Layout>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Grid container spacing={3}>
-              <Grid item xs={12}>
+              <Grid size={12}>
                 <Text
                   variant="h2"
                   align="center"
@@ -80,11 +80,11 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
             </Grid>
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Divider />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Text
               variant="h2"
               align="center"
@@ -96,11 +96,11 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
             <DataReference />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Divider />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Text
               variant="h2"
               align="center"
@@ -112,11 +112,11 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
             <JapanMap />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Divider />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Box marginBottom={3}>
               <Text variant="h2" gutterBottom>
                 全国の財政力指数 TOP {maxSize}
@@ -145,10 +145,10 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
               requiredToolBar={false}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Divider />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={12}>
             <Box marginBottom={3}>
               <Text variant="h2" gutterBottom>
                 全国の財政力指数 WORST {maxSize}
@@ -175,7 +175,7 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
         </Grid>
       </Layout>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {

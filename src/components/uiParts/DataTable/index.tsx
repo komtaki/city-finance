@@ -1,9 +1,11 @@
 import {
   DataGrid,
   GridColDef,
-  GridToolbar,
   GridRowsProp,
 } from '@mui/x-data-grid'
+import { QuickFilter } from '@mui/x-data-grid/components/quickFilter'
+import { ExportCsv } from '@mui/x-data-grid/components/export'
+import { Box } from '@mui/material'
 
 export const Field = {
   ranking: 'ranking',
@@ -61,6 +63,23 @@ export const sortAndAddRanking = (data: Finance[]): FinanceWithRanking[] => {
 const generateColumns = (fields: Field[]): GridColDef[] =>
   columns.filter((column) => fields.includes(column.field))
 
+function QuickSearchToolbar() {
+  return (
+    <Box
+      sx={{
+        p: 0.5,
+        pb: 0,
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <QuickFilter />
+      <ExportCsv />
+    </Box>
+  )
+}
+
 type Props = {
   fields: Field[]
   pageSize: number
@@ -100,14 +119,7 @@ const DataTable: React.FC<Props> = ({
       slots={
         requiredToolBar
           ? {
-              toolbar: GridToolbar,
-            }
-          : {}
-      }
-      slotProps={
-        requiredToolBar
-          ? {
-              toolbar: { showQuickFilter: true },
+              toolbar: QuickSearchToolbar,
             }
           : {}
       }
