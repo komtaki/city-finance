@@ -3,7 +3,7 @@ export const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ''
 export const isExistGaId = GA_ID !== ''
 
 // PVを測定する
-export const pageview = (path: any) => {
+export const pageview = (path: string) => {
   if (!isExistGaId) {
     console.log('pv', path)
     return

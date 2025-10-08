@@ -7,7 +7,7 @@ export default function usePageView() {
   const router = useRouter()
 
   useEffect(() => {
-    const handleRouteChange = (path: any) => {
+    const handleRouteChange = (path: string) => {
       pageview(path)
     }
 
