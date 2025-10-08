@@ -4,5 +4,4 @@ node_modules/*
 dist/
 
 robots.txt
-sitemap*
 tsconfig.tsbuildinfo
