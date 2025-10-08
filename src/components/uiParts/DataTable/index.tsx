@@ -72,7 +72,7 @@ const DataTable: React.FC<Props> = ({
       disableColumnSelector
       disableRowSelectionOnClick
       disableDensitySelector
-      pageSizeOptions={[5]}
+      pageSizeOptions={[5, 10, 25, 50]}
       initialState={{
         sorting: {
           sortModel: [{ field: 'power', sort }],

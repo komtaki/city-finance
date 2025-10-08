@@ -10,7 +10,7 @@ import {
 import { DATA_YEAR } from '../../../lib/constants'
 import { buildMetadata } from '../../../lib/metadata'
 import Layout from '../../../components/uiParts/Layout'
-import DataTable, { Field } from '../../../components/uiParts/DataTable'
+import DataTable from '../../../components/uiParts/DataTable'
 import { sortAndAddRanking } from '../../../lib/utils'
 import Text from '../../../components/uiParts/Text'
 import JapanMap from '../../../components/uiParts/JapanMap'
@@ -70,7 +70,7 @@ export default async function PrefecturePage({
 
       <DataTable
         data={data}
-        fields={[Field.ranking, Field.name, Field.power, Field.population]}
+        fields={['ranking', 'name', 'power', 'population']}
         pageSize={pageSize}
       />
       <Reference />
