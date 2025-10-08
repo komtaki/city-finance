@@ -15,12 +15,12 @@ export const getAllFinance = (): Finance[] => {
     (record: Array<string | number>, index: number) => {
       return {
         id: index,
-        prefectureName: record[1],
-        name: record[2],
-        power: record[3],
-        population: record[8],
+        prefectureName: String(record[1]),
+        name: String(record[2]),
+        power: Number(record[3]),
+        population: Number(record[8]),
       }
-    }
+    },
   )
 }
 
@@ -31,9 +31,11 @@ export const getFinanceByPrefectureName = (prefectureName: string) => {
 }
 
 export const getAllPrefectures = (): Prefecture[] => {
-  return getContents('/prefectures.csv').map((prefecture: [number, string]) => {
-    return { id: prefecture[0], name: prefecture[1] }
-  })
+  return getContents('/prefectures.csv').map(
+    (prefecture: Array<string | number>) => {
+      return { id: Number(prefecture[0]), name: String(prefecture[1]) }
+    },
+  )
 }
 
 export const getPrefectureById = (id: number): Prefecture => {

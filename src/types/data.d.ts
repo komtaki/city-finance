@@ -4,6 +4,7 @@ type Prefecture = {
 }
 
 type Finance = {
+  id: number
   name: string
   prefectureName: string
   population: number
