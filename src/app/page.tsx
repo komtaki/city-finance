@@ -9,7 +9,7 @@ import { buildMetadata } from '../lib/metadata'
 import Layout from '../components/uiParts/Layout'
 import Text from '../components/uiParts/Text'
 import JapanMap from '../components/uiParts/JapanMap'
-import DataTable, { Field } from '../components/uiParts/DataTable'
+import DataTable, { FIELDS } from '../components/uiParts/DataTable'
 import { sortAndAddRanking } from '../lib/utils'
 import DataReference from '../components/projects/DataReference'
 import FinancePowerReference from '../components/projects/FinancePowerReference'
@@ -141,11 +141,11 @@ export default async function HomePage() {
           <DataTable
             data={topData}
             fields={[
-              Field.ranking,
-              Field.prefectureName,
-              Field.name,
-              Field.power,
-              Field.population,
+              'ranking',
+              'prefectureName',
+              'name',
+              'power',
+              'population',
             ]}
             pageSize={maxSize}
             requiredToolBar={false}
@@ -167,11 +167,11 @@ export default async function HomePage() {
           <DataTable
             data={worstData}
             fields={[
-              Field.ranking,
-              Field.prefectureName,
-              Field.name,
-              Field.power,
-              Field.population,
+              'ranking',
+              'prefectureName',
+              'name',
+              'power',
+              'population',
             ]}
             sort="asc"
             pageSize={maxSize}
