@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { CMS_NAME, CMD_DOMAIN_URL } from '../../../lib/constants'
+import { CMS_NAME, CMD_DOMAIN_URL } from './constants'
 
 type Props = {
   og?: {
@@ -10,7 +10,7 @@ type Props = {
   description: string
 }
 
-export function generateMetadata({ og, title, description }: Props): Metadata {
+export function buildMetadata({ og, title, description }: Props): Metadata {
   const metadata: Metadata = {
     title: `${title} | ${CMS_NAME}`,
     description,

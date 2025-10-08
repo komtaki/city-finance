@@ -4,7 +4,8 @@ import Grid from '@mui/material/Grid'
 import Divider from '@mui/material/Divider'
 
 import { getAllFinance } from '../lib/api'
-import { CMS_NAME, DATA_YEAR, CMD_DOMAIN_URL } from '../lib/constants'
+import { DATA_YEAR, CMS_NAME } from '../lib/constants'
+import { buildMetadata } from '../lib/metadata'
 import Layout from '../components/uiParts/Layout'
 import Text from '../components/uiParts/Text'
 import JapanMap from '../components/uiParts/JapanMap'
@@ -34,23 +35,14 @@ export async function generateMetadata(): Promise<Metadata> {
     topData[2],
   )}でした。最下位は${worstCitiesText.join('と')}でした。`
 
-  return {
-    title: `${title} | ${CMS_NAME}`,
+  return buildMetadata({
+    title,
     description,
-    openGraph: {
-      title: `${title} | ${CMS_NAME}`,
-      description,
-      url: `${CMD_DOMAIN_URL}/`,
-      images: [`${CMD_DOMAIN_URL}/img/top.png`],
-      type: 'website',
+    og: {
+      url: '/',
+      imageUrl: '/img/top.png',
     },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${title} | ${CMS_NAME}`,
-      description,
-      images: [`${CMD_DOMAIN_URL}/img/top.png`],
-    },
-  }
+  })
 }
 
 export default async function HomePage() {

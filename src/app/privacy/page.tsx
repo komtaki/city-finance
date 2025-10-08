@@ -3,13 +3,13 @@ import Box from '@mui/material/Box'
 
 import Layout from '../../components/uiParts/Layout'
 import Text from '../../components/uiParts/Text'
-import { CMS_NAME } from '../../lib/constants'
+import { buildMetadata } from '../../lib/metadata'
 
-export const metadata: Metadata = {
-  title: `プライバシーポリシー | ${CMS_NAME}`,
+export const metadata: Metadata = buildMetadata({
+  title: 'プライバシーポリシー',
   description:
     'このプライバシーポリシーは、当サイトが収集する情報、情報を収集する理由について理解を深めていただくためのものです。',
-}
+})
 
 export default function PrivacyPage() {
   return (

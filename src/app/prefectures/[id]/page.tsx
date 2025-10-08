@@ -7,7 +7,8 @@ import {
   getPrefectureById,
   getFinanceByPrefectureName,
 } from '../../../lib/api'
-import { DATA_YEAR, CMS_NAME, CMD_DOMAIN_URL } from '../../../lib/constants'
+import { DATA_YEAR } from '../../../lib/constants'
+import { buildMetadata } from '../../../lib/metadata'
 import Layout from '../../../components/uiParts/Layout'
 import DataTable, { Field } from '../../../components/uiParts/DataTable'
 import { sortAndAddRanking } from '../../../lib/utils'
@@ -28,23 +29,14 @@ export async function generateMetadata({
   const title = `${prefecture.name}の財政力指数ランキング`
   const description = `政府統計から算出した${prefecture.name}の市区町村の財政力指数ランキングです。${DATA_YEAR}年の1位は${data[0].name}、2位は${data[1].name}、3位は${data[2].name}でした。`
 
-  return {
-    title: `${title} | ${CMS_NAME}`,
+  return buildMetadata({
+    title,
     description,
-    openGraph: {
-      title: `${title} | ${CMS_NAME}`,
-      description,
-      url: `${CMD_DOMAIN_URL}/prefectures/${prefecture.id}/`,
-      images: [`${CMD_DOMAIN_URL}/img/prefectures/${prefecture.id}.png`],
-      type: 'website',
+    og: {
+      url: `/prefectures/${prefecture.id}/`,
+      imageUrl: `/img/prefectures/${prefecture.id}.png`,
     },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${title} | ${CMS_NAME}`,
-      description,
-      images: [`${CMD_DOMAIN_URL}/img/prefectures/${prefecture.id}.png`],
-    },
-  }
+  })
 }
 
 export default async function PrefecturePage({
