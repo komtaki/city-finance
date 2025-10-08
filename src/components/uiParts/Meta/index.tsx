@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import { Metadata } from 'next'
 import { CMS_NAME, CMD_DOMAIN_URL } from '../../../lib/constants'
 
 type Props = {
@@ -10,25 +10,34 @@ type Props = {
   description: string
 }
 
-const Meta = ({ og, title, description }: Props) => {
-  return (
-    <Head>
-      <title>{`${title} | ${CMS_NAME}`}</title>
-      <meta name="description" content={description} />
-      {og && (
-        <>
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta
-            property="og:image"
-            content={`${CMD_DOMAIN_URL}${og.imageUrl}`}
-          />
-          <meta property="og:url" content={`${CMD_DOMAIN_URL}${og.url}`} />
-          <meta property="og:title" content={`${title} | ${CMS_NAME}`} />
-          <meta property="og:description" content={description} />
-        </>
-      )}
-    </Head>
-  )
+export function generateMetadata({ og, title, description }: Props): Metadata {
+  const metadata: Metadata = {
+    title: `${title} | ${CMS_NAME}`,
+    description,
+  }
+
+  if (og) {
+    metadata.openGraph = {
+      title: `${title} | ${CMS_NAME}`,
+      description,
+      url: `${CMD_DOMAIN_URL}${og.url}`,
+      images: [`${CMD_DOMAIN_URL}${og.imageUrl}`],
+      type: 'website',
+    }
+    metadata.twitter = {
+      card: 'summary_large_image',
+      title: `${title} | ${CMS_NAME}`,
+      description,
+      images: [`${CMD_DOMAIN_URL}${og.imageUrl}`],
+    }
+  }
+
+  return metadata
+}
+
+const Meta = (_props: Props) => {
+  // App Routerではmetadataは自動的に適用されるため、何も返さない
+  return null
 }
 
 export default Meta

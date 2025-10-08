@@ -14,6 +14,9 @@ const eslintConfig = [
   gitignore(),
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
+    ignores: ['dist/**', '.next/**', 'node_modules/**'],
+  },
+  {
     files: ['next-env.d.ts'],
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',

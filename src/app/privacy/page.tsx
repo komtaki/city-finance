@@ -1,18 +1,20 @@
+import type { Metadata } from 'next'
 import Box from '@mui/material/Box'
-import { NextPage } from 'next'
-import Head from 'next/head'
 
-import Layout from '../components/uiParts/Layout'
-import Text from '../components/uiParts/Text'
-import { CMS_NAME } from '../lib/constants'
+import Layout from '../../components/uiParts/Layout'
+import Text from '../../components/uiParts/Text'
+import { CMS_NAME } from '../../lib/constants'
 
-const Privacy: NextPage = () => {
+export const metadata: Metadata = {
+  title: `プライバシーポリシー | ${CMS_NAME}`,
+  description:
+    'このプライバシーポリシーは、当サイトが収集する情報、情報を収集する理由について理解を深めていただくためのものです。',
+}
+
+export default function PrivacyPage() {
   return (
     <Layout>
       <article>
-        <Head>
-          <title>プライバシーポリシー | {CMS_NAME}</title>
-        </Head>
         <Text component="h1" variant="h4" paragraph bold>
           プライバシーポリシー
         </Text>
@@ -103,5 +105,3 @@ const Privacy: NextPage = () => {
     </Layout>
   )
 }
-
-export default Privacy
