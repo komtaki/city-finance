@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid2'
+import Grid from '@mui/material/Grid'
 import Divider from '@mui/material/Divider'
 
 import { getAllFinance } from '../lib/api'
@@ -60,7 +60,12 @@ export default async function HomePage() {
         <Grid size={12}>
           <Grid container spacing={3}>
             <Grid size={12}>
-              <Text variant="h2" align="center" sx={{ fontWeight: 600 }} gutterBottom>
+              <Text
+                variant="h2"
+                align="center"
+                sx={{ fontWeight: 600 }}
+                gutterBottom
+              >
                 「{CMS_NAME}」の使い方
               </Text>
 
@@ -86,7 +91,12 @@ export default async function HomePage() {
         </Grid>
 
         <Grid size={12}>
-          <Text variant="h2" align="center" sx={{ fontWeight: 600 }} gutterBottom>
+          <Text
+            variant="h2"
+            align="center"
+            sx={{ fontWeight: 600 }}
+            gutterBottom
+          >
             データの参照元
           </Text>
           <DataReference />
@@ -97,7 +107,12 @@ export default async function HomePage() {
         </Grid>
 
         <Grid size={12}>
-          <Text variant="h2" align="center" sx={{ fontWeight: 600 }} gutterBottom>
+          <Text
+            variant="h2"
+            align="center"
+            sx={{ fontWeight: 600 }}
+            gutterBottom
+          >
             都道府県から探す
           </Text>
           <JapanMap />
