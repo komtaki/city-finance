@@ -9,7 +9,7 @@ type Props = TypographyProps & {
 }
 
 const Text: React.FC<Props> = ({ children, bold = false, sx, ...props }) => (
-  <Typography {...props} sx={[bold ? { fontWeight: 600 } : {}, ...(Array.isArray(sx) ? sx : [sx])]}>
+  <Typography {...props} sx={bold ? { fontWeight: 600, ...sx } : sx}>
     {children}
   </Typography>
 )
