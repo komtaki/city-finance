@@ -12,27 +12,27 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^6.4.12",
-    "@mui/x-data-grid": "^7.29.7",
-    "csv": "^6.3.11",
+    "@mui/material": "^6.5.0",
+    "@mui/x-data-grid": "^7.29.9",
+    "csv": "^6.4.1",
     "csv-parse": "^6.1.0",
-    "next": "^15.3.4",
-    "npm": "^11.4.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "sass": "^1.89.2"
+    "next": "^15.5.4",
+    "npm": "^11.6.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sass": "^1.93.2"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.20",
-    "@types/node": "^22.15.33",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "canvas": "^3.1.2",
-    "eslint": "9.30.0",
-    "eslint-config-next": "15.3.4",
+    "@types/node": "^22.18.8",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
+    "canvas": "^3.2.0",
+    "eslint": "9.37.0",
+    "eslint-config-next": "15.5.4",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   }
 }
