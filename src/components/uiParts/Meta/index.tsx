@@ -34,10 +34,3 @@ export function generateMetadata({ og, title, description }: Props): Metadata {
 
   return metadata
 }
-
-const Meta = (_props: Props) => {
-  // App Routerではmetadataは自動的に適用されるため、何も返さない
-  return null
-}
-
-export default Meta
