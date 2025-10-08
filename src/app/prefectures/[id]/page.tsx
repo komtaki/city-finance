@@ -51,7 +51,7 @@ export default async function PrefecturePage({
 
   return (
     <Layout>
-      <Box sx={{ marginBottom: 3 }}>
+      <Box sx={{ mb: 3 }}>
         <Text variant="h1" bold gutterBottom>
           {prefecture.name}の財政力指数ランキング
         </Text>

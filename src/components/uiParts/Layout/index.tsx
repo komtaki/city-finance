@@ -16,7 +16,7 @@ const Container: React.FC<Props> = ({ children }) => {
     <>
       <Header />
       <MuiContainer maxWidth="md">
-        <Box sx={{ marginTop: 3, marginBottom: 3 }}>{children}</Box>
+        <Box sx={{ mt: 3, mb: 3 }}>{children}</Box>
       </MuiContainer>
       <Footer />
     </>

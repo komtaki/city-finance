@@ -60,22 +60,17 @@ export default async function HomePage() {
         <Grid size={12}>
           <Grid container spacing={3}>
             <Grid size={12}>
-              <Text
-                variant="h2"
-                align="center"
-                sx={{ fontWeight: 600 }}
-                gutterBottom
-              >
+              <Text variant="h2" align="center" sx={{ fontWeight: 600 }} gutterBottom>
                 「{CMS_NAME}」の使い方
               </Text>
 
-              <Text sx={{ marginBottom: 2 }}>
+              <Text sx={{ mb: 2 }}>
                 政府統計から算出した全国の市区町村の財政力指数ランキングを掲載しています。
               </Text>
 
               <FinancePowerReference />
 
-              <Text sx={{ marginBottom: 2 }}>
+              <Text sx={{ mb: 2 }}>
                 人口減少で地方の過疎化が進む現代、もし自治体が財政破綻すれば小中学校などの公共インフラは大きな影響を受けます。そうなる前に、移住先や今住んでいる市区町村の財政がわかれば準備ができます。
               </Text>
 
@@ -91,12 +86,7 @@ export default async function HomePage() {
         </Grid>
 
         <Grid size={12}>
-          <Text
-            variant="h2"
-            align="center"
-            sx={{ fontWeight: 600 }}
-            gutterBottom
-          >
+          <Text variant="h2" align="center" sx={{ fontWeight: 600 }} gutterBottom>
             データの参照元
           </Text>
           <DataReference />
@@ -107,12 +97,7 @@ export default async function HomePage() {
         </Grid>
 
         <Grid size={12}>
-          <Text
-            variant="h2"
-            align="center"
-            sx={{ fontWeight: 600 }}
-            gutterBottom
-          >
+          <Text variant="h2" align="center" sx={{ fontWeight: 600 }} gutterBottom>
             都道府県から探す
           </Text>
           <JapanMap />
@@ -123,7 +108,7 @@ export default async function HomePage() {
         </Grid>
 
         <Grid size={12}>
-          <Box sx={{ marginBottom: 3 }}>
+          <Box sx={{ mb: 3 }}>
             <Text variant="h2" gutterBottom>
               全国の財政力指数 TOP {maxSize}
             </Text>
@@ -155,7 +140,7 @@ export default async function HomePage() {
           <Divider />
         </Grid>
         <Grid size={12}>
-          <Box sx={{ marginBottom: 3 }}>
+          <Box sx={{ mb: 3 }}>
             <Text variant="h2" gutterBottom>
               全国の財政力指数 WORST {maxSize}
             </Text>
