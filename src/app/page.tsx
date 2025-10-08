@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import Box from '@mui/system/Box'
-import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid2'
 import Divider from '@mui/material/Divider'
 
 import { getAllFinance } from '../lib/api'
@@ -57,9 +57,9 @@ export default async function HomePage() {
   return (
     <Layout>
       <Grid container spacing={6}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
               <Text
                 variant="h2"
                 align="center"
@@ -69,13 +69,13 @@ export default async function HomePage() {
                 「{CMS_NAME}」の使い方
               </Text>
 
-              <Text paragraph>
+              <Text sx={{ marginBottom: 2 }}>
                 政府統計から算出した全国の市区町村の財政力指数ランキングを掲載しています。
               </Text>
 
               <FinancePowerReference />
 
-              <Text paragraph>
+              <Text sx={{ marginBottom: 2 }}>
                 人口減少で地方の過疎化が進む現代、もし自治体が財政破綻すれば小中学校などの公共インフラは大きな影響を受けます。そうなる前に、移住先や今住んでいる市区町村の財政がわかれば準備ができます。
               </Text>
 
@@ -86,11 +86,11 @@ export default async function HomePage() {
           </Grid>
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Divider />
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Text
             variant="h2"
             align="center"
@@ -102,11 +102,11 @@ export default async function HomePage() {
           <DataReference />
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Divider />
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Text
             variant="h2"
             align="center"
@@ -118,12 +118,12 @@ export default async function HomePage() {
           <JapanMap />
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Divider />
         </Grid>
 
-        <Grid item xs={12}>
-          <Box marginBottom={3}>
+        <Grid size={12}>
+          <Box sx={{ marginBottom: 3 }}>
             <Text variant="h2" gutterBottom>
               全国の財政力指数 TOP {maxSize}
             </Text>
@@ -151,11 +151,11 @@ export default async function HomePage() {
             requiredToolBar={false}
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Divider />
         </Grid>
-        <Grid item xs={12}>
-          <Box marginBottom={3}>
+        <Grid size={12}>
+          <Box sx={{ marginBottom: 3 }}>
             <Text variant="h2" gutterBottom>
               全国の財政力指数 WORST {maxSize}
             </Text>

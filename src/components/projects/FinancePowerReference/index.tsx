@@ -1,10 +1,10 @@
-import Box from '@mui/system/Box'
+import Box from '@mui/material/Box'
 
 import Alert from '../../uiParts/Alert'
 import Text from '../../uiParts/Text'
 
 const FinancePowerReference = () => (
-  <Box marginBottom={3}>
+  <Box sx={{ marginBottom: 3 }}>
     <Alert title="財政力指数とは">
       <Text variant="body2" gutterBottom>
         地方公共団体の財政力を示す指数です。基準財政収入額を基準財政需要額で割った数値の過去3年間の平均です。

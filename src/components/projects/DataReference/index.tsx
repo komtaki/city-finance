@@ -1,4 +1,4 @@
-import Box from '@mui/system/Box'
+import Box from '@mui/material/Box'
 
 import { DATA_YEAR, JAPANESE_YEAR } from '../../../lib/constants'
 import Alert from '../../uiParts/Alert'
@@ -6,7 +6,7 @@ import Text from '../../uiParts/Text'
 
 const Reference = () => (
   <>
-    <Box marginBottom={3}>
+    <Box sx={{ marginBottom: 3 }}>
       <Text gutterBottom>下記の政府統計を使用しています。</Text>
       <Text variant="body2" gutterBottom>
         <a href="https://www.soumu.go.jp/iken/zaisei/R04_chiho.html">
@@ -19,7 +19,7 @@ const Reference = () => (
         </a>
       </Text>
     </Box>
-    <Box marginBottom={3}>
+    <Box sx={{ marginBottom: 3 }}>
       <Alert title="地方財政状況調査とは">
         <Text variant="body2" gutterBottom>
           都道府県や市町村など各地方公共団体の決算に関する統計調査で、統一的な会計区分が定められ予算の執行を通じて地方公共団体がどのように行政運営を行ったかを見るものです。

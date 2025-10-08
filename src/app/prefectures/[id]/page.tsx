@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import * as React from 'react'
-import Box from '@mui/system/Box'
+import Box from '@mui/material/Box'
 
 import {
   getAllPrefectures,
@@ -51,7 +51,7 @@ export default async function PrefecturePage({
 
   return (
     <Layout>
-      <Box marginBottom={3}>
+      <Box sx={{ marginBottom: 3 }}>
         <Text variant="h1" bold gutterBottom>
           {prefecture.name}の財政力指数ランキング
         </Text>
