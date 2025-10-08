@@ -1,3 +1,5 @@
+'use client'
+
 import {
   DataGrid,
   GridColDef,
@@ -5,7 +7,7 @@ import {
   GridRowsProp,
 } from '@mui/x-data-grid'
 
-export const Field = {
+const FIELDS = {
   ranking: 'ranking',
   prefectureName: 'prefectureName',
   name: 'name',
@@ -13,20 +15,20 @@ export const Field = {
   population: 'population',
 } as const
 
-type Field = keyof typeof Field
+type Field = (typeof FIELDS)[keyof typeof FIELDS]
 
 const columns = [
-  { field: Field.ranking, headerName: '順位', width: 70 },
-  { field: Field.prefectureName, headerName: '都道府県', width: 120 },
-  { field: Field.name, headerName: '名前', width: 120 },
+  { field: FIELDS.ranking, headerName: '順位', width: 70 },
+  { field: FIELDS.prefectureName, headerName: '都道府県', width: 120 },
+  { field: FIELDS.name, headerName: '名前', width: 120 },
   {
-    field: Field.power,
+    field: FIELDS.power,
     headerName: '財政力指数',
     type: 'number',
     width: 130,
   },
   {
-    field: Field.population,
+    field: FIELDS.population,
     headerName: '人口',
     description: '住民台帳に紐づく人口',
     type: 'number',
@@ -36,26 +38,6 @@ const columns = [
 
 export type FinanceWithRanking = Finance & {
   ranking: number
-}
-
-export const sortAndAddRanking = (data: Finance[]): FinanceWithRanking[] => {
-  const sortedData = data.sort((a: Finance, b: Finance) => {
-    return a.power > b.power ? -1 : 1 // オブジェクトの昇順ソート
-  })
-
-  let ranking = 1
-  return sortedData.map((datum, i) => {
-    if (i === 0 || sortedData[i - 1].power === sortedData[i].power) {
-      // 同率順位
-    } else {
-      ranking = i + 1
-    }
-
-    return {
-      ...datum,
-      ranking,
-    }
-  })
 }
 
 const generateColumns = (fields: Field[]): GridColDef[] =>
@@ -90,7 +72,7 @@ const DataTable: React.FC<Props> = ({
       disableColumnSelector
       disableRowSelectionOnClick
       disableDensitySelector
-      pageSizeOptions={[5]}
+      pageSizeOptions={[5, 10, 25, 50]}
       initialState={{
         sorting: {
           sortModel: [{ field: 'power', sort }],
