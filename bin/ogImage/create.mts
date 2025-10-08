@@ -21,8 +21,8 @@ const getContents = (filename: string) => {
 }
 
 const getAllPrefectures = (): { id: number; name: string }[] => {
-  return getContents('/prefectures.csv').map((prefecture: any) => {
-    return { id: prefecture[0], name: prefecture[1] }
+  return getContents('/prefectures.csv').map((prefecture: unknown[]) => {
+    return { id: prefecture[0] as number, name: prefecture[1] as string }
   })
 }
 

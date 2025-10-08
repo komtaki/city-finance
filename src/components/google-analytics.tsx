@@ -1,4 +1,3 @@
-import Script from 'next/script'
 import { isExistGaId, GA_ID } from '../lib/gtag'
 
 const GoogleAnalytics = () => {
