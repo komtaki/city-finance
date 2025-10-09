@@ -3,5 +3,5 @@ node_modules/*
 .next/
 dist/
 
-robots.txt
 tsconfig.tsbuildinfo
+next-env.d.ts
