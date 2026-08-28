@@ -16,7 +16,7 @@
     "@mui/x-data-grid": "^8.29.3",
     "csv": "^6.6.3",
     "csv-parse": "^6.2.1",
-    "next": "^15.5.24",
+    "next": "^16.3.3",
     "npm": "^11.19.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -33,7 +33,7 @@
     "canvas": "^3.2.3",
     "eslint": "9.39.5",
     "eslint-config-flat-gitignore": "^2.4.0",
-    "eslint-config-next": "15.5.24",
+    "eslint-config-next": "16.3.3",
     "prettier": "^3.9.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
