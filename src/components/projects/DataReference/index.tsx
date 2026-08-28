@@ -2,8 +2,8 @@ import Box from '@mui/material/Box'
 
 import {
   DATA_YEAR,
-  JAPANESE_YEAR,
   FINANCE_SURVEY_URL,
+  JAPANESE_YEAR,
   POPULATION_SURVEY_URL,
 } from '../../../lib/constants'
 import Alert from '../../uiParts/Alert'
