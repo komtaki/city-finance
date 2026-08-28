@@ -1,24 +1,11 @@
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
-import { FlatCompat } from '@eslint/eslintrc'
 import gitignore from 'eslint-config-flat-gitignore'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-})
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals'
+import nextTypeScript from 'eslint-config-next/typescript'
 
 const eslintConfig = [
   gitignore(),
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
-  {
-    files: ['next-env.d.ts'],
-    rules: {
-      '@typescript-eslint/triple-slash-reference': 'off',
-    },
-  },
+  ...nextCoreWebVitals,
+  ...nextTypeScript,
 ]
 
 export default eslintConfig
