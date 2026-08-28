@@ -1,21 +1,19 @@
-import type { Metadata } from 'next'
-import * as React from 'react'
 import Box from '@mui/material/Box'
-
+import type { Metadata } from 'next'
+import Reference from '../../../components/projects/DataReference'
+import FinancePowerReference from '../../../components/projects/FinancePowerReference'
+import DataTable from '../../../components/uiParts/DataTable'
+import JapanMap from '../../../components/uiParts/JapanMap'
+import Layout from '../../../components/uiParts/Layout'
+import Text from '../../../components/uiParts/Text'
 import {
   getAllPrefectures,
-  getPrefectureById,
   getFinanceByPrefectureName,
+  getPrefectureById,
 } from '../../../lib/api'
 import { DATA_YEAR } from '../../../lib/constants'
 import { buildMetadata } from '../../../lib/metadata'
-import Layout from '../../../components/uiParts/Layout'
-import DataTable from '../../../components/uiParts/DataTable'
 import { sortAndAddRanking } from '../../../lib/utils'
-import Text from '../../../components/uiParts/Text'
-import JapanMap from '../../../components/uiParts/JapanMap'
-import Reference from '../../../components/projects/DataReference'
-import FinancePowerReference from '../../../components/projects/FinancePowerReference'
 
 export async function generateMetadata({
   params,

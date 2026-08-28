@@ -2,9 +2,9 @@
 
 import {
   DataGrid,
-  GridColDef,
+  type GridColDef,
+  type GridRowsProp,
   GridToolbar,
-  GridRowsProp,
 } from '@mui/x-data-grid'
 
 const FIELDS = {

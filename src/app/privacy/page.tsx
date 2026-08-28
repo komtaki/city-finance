@@ -1,5 +1,5 @@
-import type { Metadata } from 'next'
 import Box from '@mui/material/Box'
+import type { Metadata } from 'next'
 
 import Layout from '../../components/uiParts/Layout'
 import Text from '../../components/uiParts/Text'
