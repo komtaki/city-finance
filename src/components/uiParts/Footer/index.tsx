@@ -14,8 +14,7 @@ const Footer = () => {
       <Divider />
       <Grid
         container
-        justifyContent="center"
-        alignItems="center"
+        sx={{ justifyContent: 'center', alignItems: 'center' }}
         className={classes['footer']}
         spacing={2}
       >
