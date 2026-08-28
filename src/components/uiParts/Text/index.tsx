@@ -1,6 +1,6 @@
 'use client'
 
-import { TypographyProps } from '@mui/material'
+import type { TypographyProps } from '@mui/material'
 import Typography from '@mui/material/Typography'
 
 type Props = TypographyProps & {

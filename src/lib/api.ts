@@ -1,5 +1,5 @@
-import fs from 'fs'
-import { join } from 'path'
+import fs from 'node:fs'
+import { join } from 'node:path'
 import { parse } from 'csv/sync'
 import { DATA_YEAR } from './constants'
 

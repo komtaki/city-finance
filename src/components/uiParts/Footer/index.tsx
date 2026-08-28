@@ -1,10 +1,9 @@
 'use client'
 
-import Link from 'next/link'
-import React from 'react'
-import Grid from '@mui/material/Grid'
 import Divider from '@mui/material/Divider'
+import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
+import Link from 'next/link'
 
 import classes from './style.module.scss'
 
@@ -15,7 +14,7 @@ const Footer = () => {
       <Grid
         container
         sx={{ justifyContent: 'center', alignItems: 'center' }}
-        className={classes['footer']}
+        className={classes.footer}
         spacing={2}
       >
         <Grid>
@@ -41,7 +40,7 @@ const Footer = () => {
             </a>
           </Typography>
         </Grid>
-        <Grid size={12} className={classes['footer__copyright']}>
+        <Grid size={12} className={classes.footer__copyright}>
           <Typography variant="caption">
             ©2022 city-finance.komtaki.com
           </Typography>

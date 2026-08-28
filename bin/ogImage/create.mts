@@ -1,12 +1,12 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import {
+  type CanvasRenderingContext2D,
   createCanvas,
-  registerFont,
   loadImage,
-  CanvasRenderingContext2D,
+  registerFont,
 } from 'canvas'
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
 import { parse } from 'csv-parse/sync'
 
 const __filename = fileURLToPath(import.meta.url)

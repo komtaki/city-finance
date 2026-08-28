@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
 import CssBaseline from '@mui/material/CssBaseline'
+import type { Metadata } from 'next'
 
 import GoogleAnalytics from '../components/google-analytics'
-import ThemeProvider from '../components/ThemeProvider'
 import PageViewTracker from '../components/PageViewTracker'
+import ThemeProvider from '../components/ThemeProvider'
 import '../styles/global.scss'
 
 export const metadata: Metadata = {

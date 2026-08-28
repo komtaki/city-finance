@@ -1,5 +1,5 @@
-import { Metadata } from 'next'
-import { CMS_NAME, CMD_DOMAIN_URL } from './constants'
+import type { Metadata } from 'next'
+import { CMD_DOMAIN_URL, CMS_NAME } from './constants'
 
 type Props = {
   og?: {

@@ -1,12 +1,12 @@
 'use client'
 
-import * as React from 'react'
+import Box from '@mui/material/Box'
+import MuiContainer from '@mui/material/Container'
+import Divider from '@mui/material/Divider'
+import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import Link from 'next/link'
-import Divider from '@mui/material/Divider'
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import MuiContainer from '@mui/material/Container'
+import type * as React from 'react'
 
 import { CMS_NAME } from '../../../lib/constants'
 
@@ -16,15 +16,15 @@ const Header: React.FC = () => {
   return (
     <header>
       <MuiContainer maxWidth="md">
-        <Box className={cssStyle['wrapper']}>
+        <Box className={cssStyle.wrapper}>
           <Image
             src="/img/serviceIcon.png"
             alt={CMS_NAME}
-            className={cssStyle['serviceIcon']}
+            className={cssStyle.serviceIcon}
             width={50}
             height={50}
           />
-          <Link href="/" className={cssStyle['serviceName']}>
+          <Link href="/" className={cssStyle.serviceName}>
             <Typography variant="h5" component="div" sx={{ fontWeight: 600 }}>
               {CMS_NAME}
             </Typography>

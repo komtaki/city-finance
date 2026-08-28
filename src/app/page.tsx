@@ -1,18 +1,17 @@
-import type { Metadata } from 'next'
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
 import Divider from '@mui/material/Divider'
-
-import { getAllFinance } from '../lib/api'
-import { DATA_YEAR, CMS_NAME } from '../lib/constants'
-import { buildMetadata } from '../lib/metadata'
-import Layout from '../components/uiParts/Layout'
-import Text from '../components/uiParts/Text'
-import JapanMap from '../components/uiParts/JapanMap'
-import DataTable from '../components/uiParts/DataTable'
-import { sortAndAddRanking } from '../lib/utils'
+import Grid from '@mui/material/Grid'
+import type { Metadata } from 'next'
 import DataReference from '../components/projects/DataReference'
 import FinancePowerReference from '../components/projects/FinancePowerReference'
+import DataTable from '../components/uiParts/DataTable'
+import JapanMap from '../components/uiParts/JapanMap'
+import Layout from '../components/uiParts/Layout'
+import Text from '../components/uiParts/Text'
+import { getAllFinance } from '../lib/api'
+import { CMS_NAME, DATA_YEAR } from '../lib/constants'
+import { buildMetadata } from '../lib/metadata'
+import { sortAndAddRanking } from '../lib/utils'
 
 const maxSize = 25
 

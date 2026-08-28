@@ -1,4 +1,9 @@
 {
-  "cSpell.words": ["gtag", "komtaki"],
-  "editor.formatOnSave": true
+  "cSpell.words": ["biome", "gtag", "komtaki"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  }
 }

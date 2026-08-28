@@ -1,8 +1,8 @@
 'use client'
 
-import * as React from 'react'
 import Box from '@mui/material/Box'
 import MuiContainer from '@mui/material/Container'
+import type * as React from 'react'
 
 import Footer from '../Footer'
 import Header from '../Header'
