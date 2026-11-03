@@ -6,7 +6,7 @@
 .tyugoku:after,
 .kyusyu:after,
 .hokkaido-touhoku:after {
-  content: '.';
+  content: ".";
   display: block;
   clear: both;
   height: 0;
@@ -35,7 +35,6 @@
       text-align: center;
       font-size: 14px;
       display: flex;
-      display: -webkit-flex;
       align-items: center; /* 縦方向中央揃え */
       -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
       justify-content: center; /* 横方向中央揃え */
